@@ -1,6 +1,6 @@
 # Next
 
-**Next** is the private owner intelligence application for Otya Hold Ltd and the connected Otya ecosystem.
+**Next** is the private owner intelligence application within **Otya OS**, operated by Otya Hold Ltd. It is an owner-facing product that connects to Otya Server; it is not a separate public marketing website or a second backend.
 
 It is not a second backend and it is not a browser admin dashboard. Next is the secure Android-first interface to the existing OTYA intelligence and operations plane: conversation, voice, approvals, incidents, support, releases, system health, connected services, memory and device actions.
 
@@ -33,7 +33,7 @@ Next should feel like a persistent intelligent partner rather than a command con
 
 ### Backend
 
-Next connects to the existing OTYA Cloudflare backend. Server-side intelligence remains server-side.
+Next connects to **Otya Server** and the approved Cloudflare services. Server-side intelligence remains server-side. Server-side intelligence remains server-side.
 
 Target backend building blocks:
 
@@ -50,7 +50,7 @@ Target backend building blocks:
 
 ## Security boundary
 
-The public OTYA Player and public Next surfaces must never inherit owner permissions.
+**Otya Media** and any public-facing surfaces must never inherit Next's owner permissions.
 
 Next uses the normal OTYA identity, then obtains a separate short-lived owner authorization after server-side role checks and step-up verification. High-impact operations require explicit approval and may require fresh biometric/server verification.
 
