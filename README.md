@@ -2,7 +2,7 @@
 
 **Otya Next** is the private owner-intelligence application in the Otya OS ecosystem, operated by Otya Hold Ltd.
 
-It is not a second backend and it is not a browser admin dashboard. Next is the secure Android-first interface to the existing OTYA intelligence and operations plane: conversation, voice, approvals, incidents, support, releases, system health, connected services, memory and device actions.
+It is not a second backend and it is not a browser admin dashboard. Next is the secure Android-first interface to the existing Otya intelligence and operations plane: conversation, voice, approvals, incidents, support, releases, system health, connected services, memory and device actions.
 
 ## Product direction
 
@@ -13,7 +13,7 @@ Next should feel like a persistent intelligent partner rather than a command con
 - stable personality: friendly, professional, calm and lightly humorous when appropriate
 - persistent context and operational memory
 - proactive but restrained notifications
-- system awareness across OTYA services
+- system awareness across Otya services
 - reflection, verification and confidence-aware answers
 - owner-only action approvals and biometric step-up
 - Android assistant role and device capabilities where the OS permits them
@@ -33,11 +33,11 @@ Next should feel like a persistent intelligent partner rather than a command con
 
 ### Backend
 
-Next connects to the existing OTYA Cloudflare backend. Server-side intelligence remains server-side.
+Next connects to the existing Otya Cloudflare backend. Server-side intelligence remains server-side.
 
 Target backend building blocks:
 
-- Cloudflare Workers / existing OTYA services
+- Cloudflare Workers / existing Otya services
 - Cloudflare Agents SDK + Durable Objects for durable agent identity, state and real-time sessions
 - Workers AI for default inference
 - AI Gateway for observability, fallback/routing and provider control
@@ -50,9 +50,9 @@ Target backend building blocks:
 
 ## Security boundary
 
-The public OTYA Player and public Next surfaces must never inherit owner permissions.
+The public Otya Player and public Next surfaces must never inherit owner permissions.
 
-Next uses the normal OTYA identity, then obtains a separate short-lived owner authorization after server-side role checks and step-up verification. High-impact operations require explicit approval and may require fresh biometric/server verification.
+Next uses the normal Otya identity, then obtains a separate short-lived owner authorization after server-side role checks and step-up verification. High-impact operations require explicit approval and may require fresh biometric/server verification.
 
 Never commit:
 
@@ -71,7 +71,7 @@ Never commit:
 - **Activity** — what Next observed, investigated, changed, verified or is waiting on
 - **Approvals** — sensitive actions awaiting owner authorization
 - **Memory** — decisions, incidents, lessons and unresolved work
-- **Connections** — GitHub, Cloudflare, Gmail/Resend, Firebase, Telegram and OTYA service status
+- **Connections** — GitHub, Cloudflare, Gmail/Resend, Firebase, Telegram and Otya service status
 - **Device** — assistant role, wake experience, notifications, media and approved phone actions
 - **Settings** — personality, voice, permissions, autonomy, interruption policy, privacy and security
 
