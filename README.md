@@ -1,6 +1,6 @@
-# Next
+# Otya Next
 
-**Next** is the private owner intelligence application for PeterSmart Link / OTYA.
+**Otya Next** is the private owner-intelligence application in the Otya OS ecosystem, operated by Otya Hold Ltd.
 
 It is not a second backend and it is not a browser admin dashboard. Next is the secure Android-first interface to the existing OTYA intelligence and operations plane: conversation, voice, approvals, incidents, support, releases, system health, connected services, memory and device actions.
 
