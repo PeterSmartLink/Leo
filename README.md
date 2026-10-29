@@ -1,6 +1,17 @@
 # Next
 
-**Next** is the private owner intelligence application for PeterSmart Link / OTYA.
+**Next** is the private owner intelligence application within the Otya ecosystem, owned by Otya Hold Ltd.
+
+## Ecosystem boundaries
+
+- **Otya OS** is the unified platform.
+- **Otya End** is the shared backend and integration layer (the current `Otya-Server` GitHub repository slug is a compatibility identifier, not the canonical product name).
+- **OtyaPoint** is the shop/business operations application. Next may surface approved health and operational summaries, but must not bypass OtyaPoint's authorization or directly expose customer, staff, inventory, or financial records.
+- **Otya Media** is the local-first media player; local playback must not depend on Next or a live backend.
+- **OtyaHub** is the public developer/partner surface and must never receive owner-only controls, private infrastructure details, or credentials.
+- **Next** is private and owner-only. It is an interface to approved backend capabilities, not a second backend or a privileged bypass.
+
+Keep existing app IDs, repository slugs, API paths, and Cloudflare resource names unchanged until a separately reviewed compatibility migration is approved. Coordinate cross-product work through https://github.com/PeterSmartLink/Otya-Server/issues/236.
 
 It is not a second backend and it is not a browser admin dashboard. Next is the secure Android-first interface to the existing OTYA intelligence and operations plane: conversation, voice, approvals, incidents, support, releases, system health, connected services, memory and device actions.
 
