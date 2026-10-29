@@ -68,5 +68,6 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
-          rm -rf build "$ANDROID_HOME/ndk" "$ANDROID_HOME/cmake" "$HOME/.gradle/caches" "$HOME/.gradle/daemon"
+          ANDROID_SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          rm -rf build "$ANDROID_SDK_ROOT/ndk" "$ANDROID_SDK_ROOT/cmake" "$HOME/.gradle/caches" "$HOME/.gradle/daemon"
           df -h "$GITHUB_WORKSPACE" "$HOME"
