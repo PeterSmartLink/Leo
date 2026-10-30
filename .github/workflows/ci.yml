@@ -62,3 +62,13 @@ jobs:
           if-no-files-found: error
           retention-days: 1
           compression-level: 0
+
+      # Free large Android build-only files before action post-job cache saves.
+      # The APK is verified above and, for manual runs, uploaded before cleanup.
+      - name: Reclaim runner disk before cache cleanup
+        if: always()
+        run: |
+          set -euo pipefail
+          ANDROID_SDK_ROOT="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          rm -rf build "$ANDROID_SDK_ROOT/ndk" "$ANDROID_SDK_ROOT/cmake" "$HOME/.gradle/caches" "$HOME/.gradle/daemon"
+          df -h "$GITHUB_WORKSPACE" "$HOME"
